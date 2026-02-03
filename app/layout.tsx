@@ -4,7 +4,7 @@ import './globals.css'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 
 export const metadata: Metadata = {
-  title: 'AETHER — Platform-Aware AI Content Repurposer for Creators',
+  title: 'Aether — Platform-Aware AI Content Repurposer for Creators',
   description:
     'Create, repurpose, and refine content for LinkedIn, X, and newsletters with platform-aware AI. Edit, customize tone, and manage all your content in one workspace.',
 

@@ -189,7 +189,35 @@
   }
 }
 
+@keyframes box-pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
+    box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+  }
+}
+
 @layer utilities {
+  .text-gradient {
+    background: linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-accent)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    -webkit-font-smoothing: antialiased;
+  }
+
   .container {
     width: 100%;
     margin-left: auto;
@@ -266,5 +294,8 @@
   }
   .aether-pulse {
     animation: text-pulse 2s ease-in-out infinite;
+  }
+  .aether-box-pulse {
+    animation: box-pulse 1s ease-in-out infinite;
   }
 }
