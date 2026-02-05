@@ -49,27 +49,26 @@ export default function Navbar() {
 
   const animateClass = scrolled
     ? 'bg-foreground/10 backdrop-blur-sm top-4 rounded-2xl w-[90%] border'
-    : 'bg-background backdrop-blur-0 top-0 w-full'
+    : 'bg-transparent backdrop-blur-0 top-0 w-full'
 
   return (
     <header
       className={`fixed left-1/2 -translate-x-1/2 top-0 z-50 py-4 ${animateClass}`}
     >
-      <div className="container flex items-center justify-between gap-4">
+      <div className="container relative flex items-center justify-between gap-4">
         <Logo />
 
-        <ul className="flex-1 hidden lg:flex items-center justify-center gap-4">
+        <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-6">
           {navLinks.map((link) => (
-            <li key={link.name}>
-              <Link
-                href={link.href}
-                className="text-muted-foreground hover:text-primary font-semibold duration-300"
-              >
-                {link.name}
-              </Link>
-            </li>
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-muted-foreground hover:text-primary font-semibold duration-300"
+            >
+              {link.name}
+            </Link>
           ))}
-        </ul>
+        </nav>
         <div className="flex items-center gap-4">
           {/* Dark Mode */}
           <Button
@@ -119,9 +118,9 @@ export default function Navbar() {
               </SheetHeader>
               <div className="grid flex-1 auto-rows-min gap-6 px-4">
                 <div className="grid gap-3">
-                  <ul className="flex flex-col overflow-y-auto h-[75vh]">
+                  <nav className="flex flex-col overflow-y-auto h-[75vh]">
                     {navLinks.map((link) => (
-                      <li key={link.name} className="not-last:border-b">
+                      <div key={link.name} className="not-last:border-b">
                         <Link
                           href={link.href}
                           className="block py-4 w-full text-muted-foreground hover:text-primary font-semibold duration-300"
@@ -129,9 +128,9 @@ export default function Navbar() {
                         >
                           {link.name}
                         </Link>
-                      </li>
+                      </div>
                     ))}
-                  </ul>
+                  </nav>
                 </div>
               </div>
               <SheetFooter>

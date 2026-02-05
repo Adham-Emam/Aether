@@ -1,6 +1,8 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
-import Loading from '@/components/ui/Loading'
+import GenericCarousel from '@/components/ui/GenericCarousel'
+
+import { posts } from '@/constants/posts'
 
 export default function Home() {
   return (
@@ -8,6 +10,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <GenericCarousel items={posts} />
       </main>
     </>
   )
