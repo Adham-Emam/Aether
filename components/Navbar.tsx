@@ -63,7 +63,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-muted-foreground hover:text-primary font-semibold duration-300"
+              className={`hover:text-primary font-semibold duration-300 ${scrolled ? 'text-foreground' : 'text-muted-foreground'}`}
             >
               {link.name}
             </Link>
@@ -93,13 +93,13 @@ export default function Navbar() {
               Log in
             </Link>
 
-            <Button asChild>
-              <motion.div whileTap={{ scale: 0.8 }}>
+            <motion.div whileTap={{ scale: 0.8 }}>
+              <Button asChild>
                 <Link href="/register" className="font-bold">
                   Start Generating
                 </Link>
-              </motion.div>
-            </Button>
+              </Button>
+            </motion.div>
           </div>
 
           {/* Mobile Navigation */}

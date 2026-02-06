@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Navbar from '@/components/Navbar'
 import './globals.css'
 
 import { ThemeProvider } from '@/contexts/ThemeContext'
@@ -29,7 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

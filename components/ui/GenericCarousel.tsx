@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { Badge } from './badge'
 import useEmblaCarousel from 'embla-carousel-react'
+import { motion } from 'motion/react'
 
 interface Items {
   platform: string
@@ -53,9 +54,13 @@ export default function InfiniteCarousel({ items }: { items: Items[] }) {
   }, [])
 
   return (
-    <section className="container relative w-full py-8 overflow-hidden">
-      <div className="absolute top-1/2 -left-5  -translate-y-1/2 bg-background blur-sm  h-full w-10 rounded-full z-50" />
-      <div className="absolute top-1/2 -right-5  -translate-y-1/2 bg-background blur-sm  h-full w-10 rounded-full z-50" />
+    <motion.section
+      initial={{ opacity: 0, scale: 0.8, y: 20, filter: 'blur(10px)' }}
+      whileInView={{ opacity: 1, scale: 1, y: 0, filter: 'blur(0px)' }}
+      className="container relative w-full py-8 overflow-hidden"
+    >
+      <div className="absolute top-1/2 -left-5  -translate-y-1/2 bg-background blur-sm  h-full w-10 rounded-full z-40" />
+      <div className="absolute top-1/2 -right-5  -translate-y-1/2 bg-background blur-sm  h-full w-10 rounded-full z-40" />
       <div
         ref={emblaRef}
         onMouseEnter={() => (pausedRef.current = true)}
@@ -81,6 +86,6 @@ export default function InfiniteCarousel({ items }: { items: Items[] }) {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }

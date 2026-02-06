@@ -14,8 +14,9 @@ export default function Hero() {
         <p className="text-primary">The Intelligence Layer for Creators</p>
       </div>
       <div className="text-center mt-8">
-        <h1 className="text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-          Content that <span className="text-gradient">actually</span> converts.
+        <h1 className="text-4xl font-bold leading-tight tracking-tighter sm:text-5xl md:text-7xl lg:text-8xl">
+          Content that <br />
+          <span className="text-gradient">actually</span> converts.
         </h1>
         <p className="mx-auto w-full lg:w-200 mt-5 text-lg text-muted-foreground dark:text-muted-foreground/70 sm:text-xl md:text-2xl">
           Generate platform-native content in seconds. Aether understands
