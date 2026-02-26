@@ -136,13 +136,15 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-    transition-duration: 0.3s;
-  }
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 4rem;
+    overflow-x: hidden;
+  }
+  body {
+    @apply bg-background text-foreground;
+    transition-duration: 0.3s;
+    overflow-x: hidden;
   }
 }
 
@@ -258,6 +260,7 @@
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
+    max-width: 100%;
   }
 
   @media (min-width: 640px) {
@@ -293,22 +296,22 @@
     }
   }
 
-  .aether-gradient {
+  .perflecta-gradient {
     background-size: 200% 200%;
     animation: gradient-x 15s ease infinite;
   }
 
-  .aether-float {
+  .perflecta-float {
     animation: float 6s ease-in-out infinite;
   }
 
-  .aether-glow {
+  .perflecta-glow {
     box-shadow:
       0 0 0 1px rgba(99, 102, 241, 0.25),
       0 0 40px rgba(34, 211, 238, 0.15);
   }
 
-  .aether-button::after {
+  .perflecta-button::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -321,10 +324,10 @@
     );
     animation: shimmer 2s infinite;
   }
-  .aether-pulse {
+  .perflecta-pulse {
     animation: text-pulse 2s ease-in-out infinite;
   }
-  .aether-box-pulse {
+  .perflecta-box-pulse {
     animation: box-pulse 1s ease-in-out infinite;
   }
 }

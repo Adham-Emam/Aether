@@ -24,7 +24,7 @@ export const howItWorksSteps = [
     id: 1,
     title: 'Generate once',
     description:
-      'Write your idea once. Aether instantly transforms it into platform-optimized content for Twitter, LinkedIn, Instagram, Email, and more.',
+      'Write your idea once. Perflecta instantly transforms it into platform-optimized content for Twitter, LinkedIn, Instagram, Email, and more.',
     microHint: 'No prompts. No formatting headaches.',
   },
   {
@@ -45,7 +45,7 @@ export const howItWorksSteps = [
     id: 4,
     title: 'Ship consistently',
     description:
-      'Consistency beats inspiration. Aether helps you stay visible without burning out or repeating yourself.',
+      'Consistency beats inspiration. Perflecta helps you stay visible without burning out or repeating yourself.',
     microHint: 'Creators who show up win.',
   },
 ]
@@ -91,7 +91,7 @@ export default function HowItWorks() {
       </motion.div>
       <div className="flex-2">
         <h2 className="section-title text-center lg:text-left">
-          How <span>Aether</span> Works
+          How <span>Perflecta</span> Works
         </h2>
         <p className="text-center lg:text-left mx-auto lg:mx-0">
           Create platform-ready content in seconds — without switching tools,

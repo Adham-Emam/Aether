@@ -59,31 +59,33 @@ export default function InfiniteCarousel({ items }: { items: Items[] }) {
       whileInView={{ opacity: 1, scale: 1, y: 0, filter: 'blur(0px)' }}
       className="container relative w-full py-8 overflow-hidden"
     >
-      <div className="absolute top-1/2 -left-5  -translate-y-1/2 bg-background blur-sm  h-full w-10 rounded-full z-40" />
-      <div className="absolute top-1/2 -right-5  -translate-y-1/2 bg-background blur-sm  h-full w-10 rounded-full z-40" />
-      <div
-        ref={emblaRef}
-        onMouseEnter={() => (pausedRef.current = true)}
-        onMouseLeave={() => (pausedRef.current = false)}
-      >
-        <div ref={trackRef} className="flex -ml-4 will-change-transform">
-          {[...items, ...items].map((item, index) => (
-            <div key={index} className="pl-4 flex-[0_0_340px]">
-              <div className="h-36 p-4 rounded-xl border bg-card text-xl font-bold shadow-sm select-none">
-                <div className="flex justify-between items-center">
-                  <Badge className={BadgeColor[item.platform]}>
-                    {item.platform}
-                  </Badge>
-                  <p className="text-xs text-card-foreground/50 font-light">
-                    {item.time}
+      <div className="relative">
+        <div className="absolute top-1/2 -left-8 -translate-y-1/2 bg-background blur-sm  h-[120%] w-10 z-40" />
+        <div className="absolute top-1/2 -right-8  -translate-y-1/2 bg-background blur-sm  h-[120%] w-10 z-40" />
+        <div
+          ref={emblaRef}
+          onMouseEnter={() => (pausedRef.current = true)}
+          onMouseLeave={() => (pausedRef.current = false)}
+        >
+          <div ref={trackRef} className="flex -ml-4 will-change-transform">
+            {[...items, ...items].map((item, index) => (
+              <div key={index} className="pl-4 flex-[0_0_340px]">
+                <div className="h-36 p-4 rounded-xl border bg-card text-xl font-bold shadow-sm select-none">
+                  <div className="flex justify-between items-center">
+                    <Badge className={BadgeColor[item.platform]}>
+                      {item.platform}
+                    </Badge>
+                    <p className="text-xs text-card-foreground/50 font-light">
+                      {item.time}
+                    </p>
+                  </div>
+                  <p className="text-sm font-light mt-5 line-clamp-3">
+                    {item.content}
                   </p>
                 </div>
-                <p className="text-sm font-light mt-5 line-clamp-3">
-                  {item.content}
-                </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </motion.section>

@@ -19,9 +19,9 @@ import { motion } from 'motion/react'
 
 const ResultCard = () => {
   return (
-    <Card className="aether-float aether-glow relative w-[90%] lg:w-1/2 z-41">
+    <Card className="perflecta-float relative w-[90%] lg:w-1/2 z-41">
       <CardHeader className="flex items-center gap-4">
-        <Skeleton className="w-12 h-12 rounded-full box-gradient aether-gradient" />
+        <Skeleton className="w-12 h-12 rounded-full box-gradient perflecta-gradient" />
 
         <div className="space-y-2">
           <Skeleton className="w-30 h-4" />
@@ -90,7 +90,6 @@ export default function Playground() {
                       variant={
                         platform === selectedPlatform ? 'default' : 'outline'
                       }
-                      className="cursor-pointer"
                       onClick={() => setSelectedPlatform(platform)}
                     >
                       {platform}
@@ -99,10 +98,7 @@ export default function Playground() {
                 </div>
               </div>
               <CardAction className="text-lg font-semibold w-full">
-                <Button
-                  type="submit"
-                  className="py-8 rounded-2xl cursor-pointer w-full"
-                >
+                <Button type="submit" className="py-8 rounded-2xl w-full">
                   Generate Sample
                 </Button>
               </CardAction>
@@ -110,7 +106,12 @@ export default function Playground() {
           </CardContent>
         </div>
         <div className="relative flex items-center justify-center min-h-125 flex-2 bg-background backdrop-blur-2xl rounded-2xl overflow-hidden">
-          <ShadowOverlay color="bg-accent" zIndex="z-40" />
+          <ShadowOverlay
+            center
+            color="bg-accent"
+            opacity="opacity-10"
+            zIndex="z-40"
+          />
           <ResultCard />
         </div>
       </Card>

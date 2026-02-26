@@ -23,7 +23,7 @@ export default function Footer() {
         </nav>
 
         <p className="text-xs font-semibold text-muted-foreground/50">
-          &copy; {new Date().getFullYear()} AETHER SOLUTIONS LABS. ALL RIGHTS
+          &copy; {new Date().getFullYear()} Perflecta SOLUTIONS LABS. ALL RIGHTS
           RESERVED.
         </p>
       </div>

@@ -27,7 +27,7 @@ export const posts = [
     platform: 'Twitter',
     time: 'Just now',
     content:
-      "Aether is literally changing how I write. It's like having a co-writer who never sleeps.",
+      "Perflecta is literally changing how I write. It's like having a co-writer who never sleeps.",
   },
   {
     platform: 'LinkedIn',

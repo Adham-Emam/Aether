@@ -16,7 +16,7 @@ export default function Loading({
           <div className="absolute top-1/2 left-1/2 -translate-1/2 bg-primary w-10 h-10 rounded-full" />
           <LoaderCircle className="absolute top-1/2 left-1/2 -translate-1/2 text-primary w-20 h-20 animate-spin" />
         </div>
-        {text && <p className="aether-pulse font-bold text-md">{text}...</p>}
+        {text && <p className="perflecta-pulse font-bold text-md">{text}...</p>}
       </div>
     </div>
   )

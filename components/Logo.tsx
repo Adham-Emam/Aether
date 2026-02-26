@@ -6,7 +6,7 @@ export default function Logo() {
       <div className="bg-primary text-white p-2 rounded-md">
         <Zap />
       </div>
-      <strong className="text-2xl font-extrabold">AETHER</strong>
+      <strong className="text-2xl font-extrabold">Perflecta</strong>
     </div>
   )
 }

@@ -14,7 +14,7 @@ const pricingPlans = [
     name: 'Free',
     price: '$0',
     interval: 'forever',
-    description: 'Try Aether and feel the flow.',
+    description: 'Try Perflecta and feel the flow.',
     icon: Sparkles,
     highlighted: false,
     features: [

@@ -5,7 +5,7 @@ import './globals.css'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 
 export const metadata: Metadata = {
-  title: 'Aether — Platform-Aware AI Content Repurposer for Creators',
+  title: 'Perflecta — Platform-Aware AI Content Repurposer for Creators',
   description:
     'Create, repurpose, and refine content for LinkedIn, X, and newsletters with platform-aware AI. Edit, customize tone, and manage all your content in one workspace.',
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'AI writing tool',
   ],
 
-  applicationName: 'AETHER',
+  applicationName: 'Perflecta',
 }
 
 export default function RootLayout({
